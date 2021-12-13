@@ -1,4 +1,4 @@
-type UserAccount = {
+export type UserAccount = {
   id: number;
   text: string;
   type: 'totp' | 'hotp';
@@ -15,7 +15,7 @@ type UserAccount = {
   };
 };
 
-type Key = {
+export type Key = {
   type: 'totp' | 'hotp';
   label: {
     account: string;

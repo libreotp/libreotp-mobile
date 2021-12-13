@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {List, Checkbox} from 'react-native-paper';
-
 import TokenGet from '../../TokenGet';
+import type {UserAccount} from '../../../types';
 
 type Props = {
   account: UserAccount;

@@ -4,6 +4,7 @@ global.Buffer = Buffer;
 import {Authenticator} from '@otplib/core';
 import {keyDecoder, keyEncoder} from '@otplib/plugin-base32-enc-dec';
 import {createDigest, createRandomBytes} from '@otplib/plugin-crypto-js';
+import type {UserAccount} from '../types';
 
 const authenticator = new Authenticator({
   createDigest,

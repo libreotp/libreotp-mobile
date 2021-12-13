@@ -2,8 +2,8 @@ import React from 'react';
 import {View} from 'react-native';
 import {Headline, Button} from 'react-native-paper';
 import {Trans} from '@lingui/macro';
-
 import AccountListItem from './Item';
+import type {UserAccount} from '../../types';
 
 type Props = {
   navigation: any;

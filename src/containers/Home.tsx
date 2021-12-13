@@ -2,8 +2,9 @@ import React, {useState, useEffect} from 'react';
 import {StyleSheet} from 'react-native';
 import {Appbar, FAB, Searchbar, Menu} from 'react-native-paper';
 import EncryptedStorage from 'react-native-encrypted-storage';
-import AccountList from '../components/AccountList';
 import {Plural, t} from '@lingui/macro';
+import AccountList from '../components/AccountList';
+import type {UserAccount} from '../types';
 
 const Home = ({navigation}: {navigation: any}) => {
   const [accounts, setAccounts] = useState<UserAccount[]>([]);
@@ -46,10 +47,10 @@ const Home = ({navigation}: {navigation: any}) => {
 
   useEffect(() => {
     async function getAccounts() {
-      const accounts: UserAccount[] = JSON.parse(
+      const userAccounts: UserAccount[] = JSON.parse(
         (await EncryptedStorage.getItem('accounts')) || '[]',
       );
-      setAccounts(accounts);
+      setAccounts(userAccounts);
     }
 
     getAccounts();

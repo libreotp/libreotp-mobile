@@ -4,6 +4,7 @@ import QRCodeScanner from 'react-native-qrcode-scanner';
 import EncryptedStorage from 'react-native-encrypted-storage';
 import keyUriParser from '../utils/keyUriParser';
 import {Trans} from '@lingui/macro';
+import type {UserAccount} from '../types';
 
 const Scan = ({navigation}: {navigation: any}) => {
   const handleSave = async (event: any): Promise<void> => {

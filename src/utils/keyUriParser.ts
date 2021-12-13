@@ -1,5 +1,6 @@
 import bugsnag from '../bugsnag';
 import {URL} from 'react-native-url-polyfill';
+import type {Key} from '../types';
 
 function keyUriParser(uri: string): Key | null {
   try {
