@@ -1,6 +1,6 @@
 # LibreOTP
 
-LibreOTP is an open source two-factor authentication web application for systems utilizing one-time password protocols.
+LibreOTP is an open source two-factor authentication [web](https://github.com/libreotp/libreotp-web) and [mobile](https://github.com/libreotp/libreotp-mobile) application for systems utilizing one-time password protocols.
 
 LibreOTP supports:
 
