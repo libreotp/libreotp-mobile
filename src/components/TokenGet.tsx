@@ -17,7 +17,7 @@ type Props = {
   setTrigger: (value: React.SetStateAction<boolean>) => void;
 };
 
-const TokenGet = ({account, setTrigger}: Props): JSX.Element => {
+const TokenGet = ({account, setTrigger}: Props) => {
   const [token, setToken] = useState<string | null>(null);
   const [timeLeft, setTimeLeft] = useState<number>(
     authenticator.timeRemaining(),

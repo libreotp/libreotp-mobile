@@ -15,7 +15,7 @@ const AccountListItem = ({
   showSelectBar,
   selectedAccounts,
   setSelectedAccounts,
-}: Props): JSX.Element => {
+}: Props) => {
   const [trigger, setTrigger] = useState<boolean>(false);
 
   const setChecked = (value: number) => {

@@ -21,7 +21,7 @@ const AccountList = ({
   showSelectBar,
   selectedAccounts,
   setSelectedAccounts,
-}: Props): JSX.Element => {
+}: Props) => {
   const filteredAccounts = accounts.filter(account => {
     return (
       account.label.account.toLowerCase().includes(filter.toLowerCase()) ||

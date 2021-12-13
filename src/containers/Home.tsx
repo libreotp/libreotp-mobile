@@ -31,15 +31,15 @@ const Home = ({navigation}: {navigation: any}) => {
   };
 
   const handleDelete = async () => {
-    const accounts: UserAccount[] = JSON.parse(
+    const userAccounts: UserAccount[] = JSON.parse(
       (await EncryptedStorage.getItem('accounts')) || '[]',
     );
-    const deletion = accounts.filter(account =>
+    const deletion = userAccounts.filter(account =>
       selectedAccounts.includes(account.id),
     );
     await EncryptedStorage.setItem('accounts', JSON.stringify(deletion));
 
-    setAccounts(accounts);
+    setAccounts(userAccounts);
 
     setShowSelectBar(false);
   };
