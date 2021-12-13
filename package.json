@@ -1,0 +1,91 @@
+{
+  "name": "@libreotp/mobile",
+  "version": "1.0.0",
+  "author": "David Routhieau",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "start": "react-native start",
+    "analyze": "react-native-bundle-visualizer --platform android",
+    "test": "jest",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "prettify": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "i18n:extract": "lingui extract",
+    "i18n:compile": "lingui compile",
+    "generate:icons": "react-native set-icon --platform android --path"
+  },
+  "dependencies": {
+    "@bugsnag/react-native": "7.14.1",
+    "@lingui/react": "3.13.0",
+    "@otplib/core": "12.0.1",
+    "@otplib/plugin-base32-enc-dec": "12.0.1",
+    "@otplib/plugin-crypto-js": "12.0.1",
+    "@react-navigation/native": "6.0.6",
+    "@react-navigation/native-stack": "6.2.5",
+    "buffer": "6.0.3",
+    "react": "17.0.2",
+    "react-native": "0.66.4",
+    "react-native-camera": "4.2.1",
+    "react-native-encrypted-storage": "4.0.2",
+    "react-native-paper": "4.11.0",
+    "react-native-permissions": "3.2.0",
+    "react-native-qrcode-scanner": "1.5.4",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "3.10.1",
+    "react-native-url-polyfill": "1.3.0",
+    "react-native-vector-icons": "9.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.0",
+    "@babel/runtime": "7.16.3",
+    "@bam.tech/react-native-make": "3.0.3",
+    "@lingui/cli": "3.13.0",
+    "@lingui/macro": "3.13.0",
+    "@react-native-community/eslint-config": "3.0.1",
+    "@types/jest": "27.0.3",
+    "@types/react-native": "0.66.8",
+    "@types/react-native-vector-icons": "6.4.10",
+    "@types/react-test-renderer": "17.0.1",
+    "babel-jest": "27.4.4",
+    "babel-plugin-macros": "3.1.0",
+    "eslint": "7.32.0",
+    "husky": "7.0.4",
+    "jest": "27.4.4",
+    "lint-staged": "12.1.2",
+    "metro-react-native-babel-preset": "0.66.2",
+    "prettier": "2.5.1",
+    "react-native-bundle-visualizer": "3.1.1",
+    "react-test-renderer": "17.0.2",
+    "typescript": "4.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --write"
+    ]
+  },
+  "resolutions": {
+    "@types/react": "^17"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "engines": {
+    "node": "16"
+  }
+}
