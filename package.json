@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.16.0",
-    "@babel/runtime": "7.16.3",
+    "@babel/runtime": "7.17.9",
     "@bam.tech/react-native-make": "3.0.3",
     "@lingui/cli": "3.13.0",
     "@lingui/macro": "3.13.0",
